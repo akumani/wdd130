@@ -1,74 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-nav{
-    background-color: darkblue;
-    padding: 10px;  
+body {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: steelblue;
 }
 
 nav a {
-    color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
 }
 
-main{
-    max-width: 840px;
+.grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20rem minmax(0, 1fr);
+    gap: 1rem;
 }
 
-aside{
-    width: 20rem;
+.grid > aside {
+    grid-column: 1;
+    width: auto;
+    margin: 1rem 0;
+}
+
+.grid > main {
+    grid-column: 2 / 3;
     margin: 1rem;
-    position: relative;
 }
 
-aside h2{
+aside {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+    width: 20rem;
+    margin: 1rem 0;
+}
+
+aside h2 {
     position: absolute;
     top: 1.5rem;
     left: 4rem;
 }
 
-aside img{
+aside img {
     width: 200px;
     height: auto;
 }
 
-h1 {
-    color: darkblue;
+main {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    margin: 1rem 0;
 }
 
-main img{
+main img {
+    float: right;
     width: 150px;
     height: auto;
-    border: 1px solid black;
     padding: 2px;
-    box-shadow: 0px 0px 30px gray;
-    float: right;
-}
-
-p {
-    padding: 0;
+    border: 1px solid black;
+    box-shadow: 0 0 30px gray;
 }
 
 main ul {
     clear: right;
 }
 
-footer{
+p {
+    padding: 0;
+}
+
+footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
 }
 
-/* Class Selector */
-.box{
-    margin:1rem ;
-    border: 1px solid rgba(0,0,0,0.1) ;
-    padding: 1rem;
+.box {
+    margin: 1rem;
+    padding: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #eee;
     color: #000;
 }
