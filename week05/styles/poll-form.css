@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: min(600px, calc(100% - 24px));
+    margin: 7px auto;
+    color: #000;
+    font-family: "Times New Roman", serif;
+}
+
+header {
+    border-top: 1px solid #999;
+    padding-top: 12px;
+}
+
+h1 {
+    margin: 0 0 17px;
+    font-size: 18px;
+}
+
+form {
+    font-size: 11px;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0 0 4px;
+    padding: 3px 7px 6px;
+    border: 1px solid #999;
+}
+
+legend {
+    padding: 0 2px;
+}
+
+.contact-fields label {
+    display: inline-block;
+    width: 47px;
+}
+
+.contact-fields input {
+    width: 98px;
+    height: 13px;
+    padding: 1px 2px;
+    font-size: 10px;
+}
+
+.question-row {
+    display: flex;
+    align-items: center;
+    min-height: 14px;
+}
+
+.browser-row label {
+    margin-right: 4px;
+}
+
+.pet-row label,
+.feedback-row label {
+    flex: 0 0 130px;
+}
+
+.question-row select {
+    font-size: 10px;
+}
+
+.pet-row input {
+    margin: 0;
+}
+
+.feedback-row {
+    align-items: flex-end;
+}
+
+.feedback-row textarea {
+    width: 96px;
+    height: 32px;
+    padding: 2px;
+    font-size: 9px;
+    resize: both;
+}
+
+button {
+    padding: 1px 4px;
+    font-size: 10px;
+}
+
+footer {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .browser-row {
+        flex-wrap: wrap;
+    }
+
+    .browser-row label {
+        flex-basis: 100%;
+        margin-bottom: 3px;
+    }
+
+    .pet-row label,
+    .feedback-row label {
+        flex-basis: min(130px, 55%);
+    }
+
+    .feedback-row textarea {
+        max-width: calc(45% - 4px);
+    }
+}
