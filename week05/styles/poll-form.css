@@ -12,12 +12,26 @@
     box-sizing: border-box;
 }
 
+html {
+    background: var(--page-bg);
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
 body {
-    width: min(880px, calc(100% - 30px));
+    width: 100%;
+    max-width: 880px;
     margin: 10px auto 0;
+    padding: 0 15px;
     background: var(--page-bg);
     color: var(--label-color);
     font-family: "Times New Roman", Georgia, serif;
+    box-sizing: border-box;
 }
 
 header {
