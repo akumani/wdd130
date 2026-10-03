@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 12px 16px 0;
+    color: #111;
+    font-family: "Times New Roman", Georgia, serif;
+    line-height: 1.5;
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #101080;
+    font-size: 1.25rem;
+}
+
+h1::before {
+    content: "\2611";
+    margin-right: 8px;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: grid;
+    gap: 0;
+    padding: 18px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-item {
+    display: grid;
+    gap: 6px;
+    margin: 0 0 10px;
+    padding: 0;
+    border: 0;
+}
+
+label {
+    display: block;
+}
+
+.form-item strong {
+    color: #101080;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background: #fff;
+    color: #111;
+    font: inherit;
+}
+
+textarea {
+    min-height: 78px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #090080;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #17108f;
+}
+
+footer {
+    margin-top: 22px;
+    padding: 12px 8px;
+    border-top: 1px solid #d4d4d4;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    form {
+        padding: 14px;
+    }
+
+}
