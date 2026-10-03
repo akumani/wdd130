@@ -12,6 +12,7 @@
     --body-font: Arial, Helvetica, sans-serif;
     --nav-border-color: #ffffff;
     --nav-text-color: #ffffff;
+    --nav-link-padding: 0.4rem 1.5rem;
     --transparent-color: #00000000;
     --hero-heading-overlay: #264653cc;
 }
@@ -98,7 +99,7 @@ nav ul {
 
 nav a {
     display: block;
-    padding: 0.4rem 1.5rem;
+    padding: var(--nav-link-padding);
     color: var(--nav-text-color);
     background-color: var(--transparent-color);
     border: 1px solid var(--nav-border-color);
@@ -250,7 +251,7 @@ nav a:hover {
         flex: 1 1 45%;
     }
 
-    header nav a {
-        padding: 0.5rem;
+    header nav {
+        --nav-link-padding: 0.5rem;
     }
 }
