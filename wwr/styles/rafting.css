@@ -165,7 +165,7 @@ nav a:hover {
     right: 5%;
     margin: 0;
     padding: 1rem;
-    background-color: rgb(244 162 97 / 85%);
+    background-color: color-mix(in srgb, var(--secondary-color) 85%, transparent);
 }
 
 .hero article img {
