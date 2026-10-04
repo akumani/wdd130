@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Contact Exciting Expeditions with questions about rafting trips, reservations, or our services.">
+    <meta name="author" content="Akumani Edem">
+    <title>Contact Us | Exciting Expeditions</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="Exciting Expeditions logo">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-intro">
+            <h1>Contact Exciting Expeditions</h1>
+            <address>
+                <span>123 River Road, Moab, UT 84532</span>
+                <a href="tel:+15550102026">+1 (555) 010-2026</a>
+                <a href="mailto:info@excitingexpeditions.com">info@excitingexpeditions.com</a>
+            </address>
+        </section>
+
+        <section class="contact-layout" aria-label="Map and contact form">
+            <div class="contact-map">
+                <h2>Find Us</h2>
+                <iframe
+                    title="Map showing Moab, Utah"
+                    src="https://maps.google.com/maps?q=Moab%2C%20Utah&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form">
+                    <div class="contact-field">
+                        <label for="visitor-name">Name</label>
+                        <input type="text" id="visitor-name" name="name" autocomplete="name" placeholder="e.g., Jordan Lee" required>
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="visitor-email">Email</label>
+                        <input type="email" id="visitor-email" name="email" autocomplete="email" placeholder="e.g., jordan@example.com" required>
+                    </div>
+
+                    <fieldset class="message-purpose">
+                        <legend>Purpose of Message</legend>
+                        <label for="purpose-general">
+                            <input type="radio" id="purpose-general" name="purpose" value="general" required>
+                            General Inquiry
+                        </label>
+                        <label for="purpose-reservation">
+                            <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+                            Reservation Question
+                        </label>
+                        <label for="purpose-suggestion">
+                            <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
+                            Website Suggestion
+                        </label>
+                    </fieldset>
+
+                    <div class="contact-field">
+                        <label for="visitor-message">Message</label>
+                        <textarea id="visitor-message" name="message" rows="5" placeholder="How can we help with your rafting plans?" required></textarea>
+                    </div>
+
+                    <label class="newsletter-choice" for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        Please subscribe me to the monthly newsletter
+                    </label>
+
+                    <button type="submit">Send Your Message</button>
+                </form>
+            </section>
+        </section>
+
+        <section class="employee-team">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-gallery">
+                <figure>
+                    <img src="images/employee-operations.jpg" alt="Portrait of Maya Chen">
+                    <figcaption>
+                        <strong>Maya Chen</strong>
+                        <span>River Operations Manager</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee-guide.jpg" alt="Portrait of Jordan Brooks">
+                    <figcaption>
+                        <strong>Jordan Brooks</strong>
+                        <span>Lead Rafting Guide</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee-guest-services.jpg" alt="Portrait of Sofia Martinez">
+                    <figcaption>
+                        <strong>Sofia Martinez</strong>
+                        <span>Guest Experience Coordinator</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Exciting Expeditions | Akumani Edem</p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+</html>
