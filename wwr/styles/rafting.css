@@ -633,7 +633,7 @@ nav a:hover {
     header {
         grid-template-columns: 1fr;
         justify-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
     }
 
     header > a img {
@@ -648,14 +648,103 @@ nav a:hover {
     header nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 0.4rem;
     }
 
     header nav li {
-        flex: 1 1 45%;
+        flex: 1 1 calc(50% - 0.4rem);
     }
 
     header nav {
         --nav-link-padding: 0.5rem;
+    }
+
+    header nav a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    footer > p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .socialmedia {
+        justify-content: center;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero > img {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .hero h1 {
+        top: 1rem;
+        padding: 0.65rem;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .hero article {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .hero article img {
+        float: none;
+        flex: 0 0 88px;
+        width: 88px;
+        height: 72px;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .hero article p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .history {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .history h2 {
+        grid-column: auto;
+        margin-bottom: 0;
+    }
+
+    .history p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .history img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
     }
 
     .contact-layout {
