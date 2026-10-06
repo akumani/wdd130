@@ -631,7 +631,7 @@ nav a:hover {
 
 @media (max-width: 700px) {
     header {
-        grid-template-columns: clamp(60px, 20vw, 120px) minmax(0, 1fr);
+        grid-template-columns: clamp(88px, 25vw, 150px) minmax(0, 1fr);
         gap: 0.375rem;
     }
 
@@ -640,23 +640,23 @@ nav a:hover {
     }
 
     header nav {
-        width: auto;
+        width: 100%;
         justify-content: stretch;
     }
 
     header nav ul {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        display: flex;
         width: 100%;
-        gap: 0.2rem;
+        justify-content: space-between;
+        gap: 0.15rem;
     }
 
     header nav li {
-        min-width: 0;
+        flex: 0 1 auto;
     }
 
     header nav {
-        --nav-link-padding: 0.35rem 0.08rem;
+        --nav-link-padding: 0.35rem 0.2rem;
     }
 
     header nav a {
@@ -665,7 +665,7 @@ nav a:hover {
         align-items: center;
         justify-content: center;
         padding: var(--nav-link-padding);
-        font-size: clamp(0.52rem, 2.5vw, 0.8rem);
+        font-size: clamp(0.5rem, 1.5vw, 0.9rem);
         white-space: nowrap;
     }
 
