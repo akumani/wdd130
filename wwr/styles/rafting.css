@@ -63,7 +63,11 @@ header > a img {
 
 header nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+header nav summary {
+    display: none;
 }
 
 /* Heading Typography */
@@ -97,20 +101,38 @@ nav ul {
     padding: 0;
 }
 
-nav a {
-    display: block;
-    padding: var(--nav-link-padding);
-    color: var(--nav-text-color);
-    background-color: var(--transparent-color);
-    border: 1px solid var(--nav-border-color);
-    text-decoration: none;
-    font-weight: normal;
-    text-align: center;
+header nav ul {
+    display: flex;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav a:hover {
-    background-color: var(--accent2-color);
-    color: var(--accent1-color);
+header nav details > ul {
+    display: flex;
+}
+
+header nav a {
+    display: block;
+    padding: 0.65rem 0.85rem;
+    color: var(--nav-text-color);
+    background-color: var(--transparent-color);
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    border-bottom-color: var(--accent2-color);
+    color: var(--accent2-color);
+}
+
+header nav a[aria-current="page"] {
+    border-bottom-color: var(--accent2-color);
 }
 
 /* Hero Section Styling */
@@ -631,42 +653,78 @@ nav a:hover {
 
 @media (max-width: 700px) {
     header {
-        grid-template-columns: clamp(88px, 25vw, 150px) minmax(0, 1fr);
-        gap: 0.375rem;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 1rem;
     }
 
     header > a img {
-        width: 100%;
+        width: clamp(100px, 28vw, 150px);
     }
 
     header nav {
-        width: 100%;
-        justify-content: stretch;
+        justify-content: flex-end;
     }
 
-    header nav ul {
+    header nav details {
+        position: relative;
+    }
+
+    header nav summary {
         display: flex;
-        width: 100%;
-        justify-content: space-between;
+        min-height: 44px;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #ffffff80;
+        border-radius: 4px;
+        color: var(--nav-text-color);
+        cursor: pointer;
+        font-weight: 700;
+        list-style: none;
+    }
+
+    header nav summary::-webkit-details-marker {
+        display: none;
+    }
+
+    header nav summary::after {
+        width: 1rem;
+        height: 0.7rem;
+        background: linear-gradient(
+            to bottom,
+            var(--nav-text-color) 0 2px,
+            transparent 2px 5px,
+            var(--nav-text-color) 5px 7px,
+            transparent 7px 10px,
+            var(--nav-text-color) 10px 12px
+        );
+        content: "";
+    }
+
+    header nav details > ul {
+        position: absolute;
+        z-index: 5;
+        top: calc(100% + 0.5rem);
+        right: 0;
+        display: none;
+        min-width: 12rem;
+        flex-direction: column;
         gap: 0.15rem;
+        padding: 0.5rem;
+        border: 1px solid #ffffff30;
+        border-radius: 4px;
+        background-color: var(--primary-color);
+        box-shadow: 0 8px 20px #00000030;
     }
 
-    header nav li {
-        flex: 0 1 auto;
-    }
-
-    header nav {
-        --nav-link-padding: 0.35rem 0.2rem;
+    header nav details[open] > ul {
+        display: flex;
     }
 
     header nav a {
         min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--nav-link-padding);
-        font-size: clamp(0.5rem, 1.5vw, 0.9rem);
-        white-space: nowrap;
+        padding: 0.65rem 0.75rem;
+        text-align: left;
     }
 
     footer {
