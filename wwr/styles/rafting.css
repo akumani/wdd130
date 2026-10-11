@@ -302,6 +302,14 @@ header nav a[aria-current="page"] {
     font-weight: 700;
 }
 
+.message-purpose legend {
+    position: absolute;
+    top: -1.8rem;
+    left: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
 .contact-field input,
 .contact-field textarea {
     width: 100%;
@@ -313,6 +321,8 @@ header nav a[aria-current="page"] {
 }
 
 .message-purpose {
+    position: relative;
+    margin-top: 1.25rem;
     display: grid;
     gap: 0.5rem;
     padding: 0.75rem;
