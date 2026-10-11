@@ -14,7 +14,7 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="images/logo.jpg" alt="Exciting Expeditions logo">
+            <img src="images/logo-optimized.jpg" alt="Exciting Expeditions logo">
         </a>
 
         <nav aria-label="Main navigation">
@@ -29,7 +29,7 @@
 
     <main class="home-page">
         <section class="home-hero">
-            <img src="images/hero.jpg" alt="Rafters enjoying a white-water adventure">
+            <img src="images/hero-optimized.jpg" alt="Rafters enjoying a white-water adventure">
             <div class="home-hero-content">
                 <p class="eyebrow">Find your flow in Moab, Utah</p>
                 <h1>Your next great adventure starts here.</h1>
@@ -57,7 +57,7 @@
 
             <div class="home-trip-grid">
                 <article class="home-trip-card">
-                    <img src="images/aside_img2.jpg" alt="A calm stretch of river surrounded by red-rock scenery">
+                    <img src="images/aside_img2-optimized.jpg" alt="A calm stretch of river surrounded by red-rock scenery">
                     <div>
                         <h3>Family River Float</h3>
                         <p>A relaxed introduction to the river, with time to enjoy the scenery and paddle together.</p>
@@ -65,7 +65,7 @@
                     </div>
                 </article>
                 <article class="home-trip-card">
-                    <img src="images/aside_img3.jpg" alt="Raft moving through lively white-water rapids">
+                    <img src="images/aside_img3-optimized.jpg" alt="Raft moving through lively white-water rapids">
                     <div>
                         <h3>Colorado River Run</h3>
                         <p>A full day of scenic stretches, splashy rapids, and a riverside break with your crew.</p>
@@ -73,7 +73,7 @@
                     </div>
                 </article>
                 <article class="home-trip-card">
-                    <img src="images/aside_img5.jpg" alt="Rafters getting ready for a river adventure">
+                    <img src="images/aside_img5-optimized.jpg" alt="Rafters getting ready for a river adventure">
                     <div>
                         <h3>Red Rock Rapids</h3>
                         <p>Step up the excitement with a fast-moving trip through striking canyon country.</p>
@@ -84,13 +84,32 @@
         </section>
 
         <section class="home-promise">
-            <img src="images/happy-client.jpg" alt="A smiling guest after a rafting trip">
+            <img src="images/happy-client-optimized.jpg" alt="A smiling guest after a rafting trip">
             <div>
                 <p class="eyebrow">Good people. Great rivers.</p>
                 <h2>Feel confident from shore to splashdown</h2>
                 <p>Our friendly guides make every outing welcoming, memorable, and focused on enjoying the river safely. We will help you choose the right trip and get ready for your day outside.</p>
                 <a class="site-button" href="contact.html">Talk with our team</a>
             </div>
+        </section>
+
+        <section class="home-newsletter" aria-labelledby="newsletter-title">
+            <div>
+                <p class="eyebrow">Stay in the current</p>
+                <h2 id="newsletter-title">Get river updates</h2>
+                <p>Hear about seasonal trips, river conditions, and new adventures.</p>
+            </div>
+            <form class="newsletter-form">
+                <label for="newsletter-name">
+                    Name
+                    <input type="text" id="newsletter-name" name="name" autocomplete="name" required>
+                </label>
+                <label for="newsletter-email">
+                    Email
+                    <input type="email" id="newsletter-email" name="email" autocomplete="email" required>
+                </label>
+                <button class="site-button" type="submit">Sign up</button>
+            </form>
         </section>
     </main>
 
